@@ -1,1 +1,10 @@
 C:\Users\Camilo\Documents\Visual Studio 2015\Projects\AppName\AppName\bin\Debug\AppName.exe.config
+C:\Users\Camilo\Documents\Visual Studio 2015\Projects\AppName\Views-namespace-AppWindows\AppName\bin\Debug\AppName.exe.config
+C:\Users\Camilo\Documents\Visual Studio 2015\Projects\AppName\Views-namespace-AppWindows\AppName\bin\Debug\AppName.exe
+C:\Users\Camilo\Documents\Visual Studio 2015\Projects\AppName\Views-namespace-AppWindows\AppName\bin\Debug\AppName.pdb
+C:\Users\Camilo\Documents\Visual Studio 2015\Projects\AppName\Views-namespace-AppWindows\AppName\obj\Debug\AppName.csprojResolveAssemblyReference.cache
+C:\Users\Camilo\Documents\Visual Studio 2015\Projects\AppName\Views-namespace-AppWindows\AppName\obj\Debug\AppName.Form1.resources
+C:\Users\Camilo\Documents\Visual Studio 2015\Projects\AppName\Views-namespace-AppWindows\AppName\obj\Debug\AppName.Properties.Resources.resources
+C:\Users\Camilo\Documents\Visual Studio 2015\Projects\AppName\Views-namespace-AppWindows\AppName\obj\Debug\AppName.csproj.GenerateResource.Cache
+C:\Users\Camilo\Documents\Visual Studio 2015\Projects\AppName\Views-namespace-AppWindows\AppName\obj\Debug\AppName.exe
+C:\Users\Camilo\Documents\Visual Studio 2015\Projects\AppName\Views-namespace-AppWindows\AppName\obj\Debug\AppName.pdb
