@@ -32,9 +32,20 @@ namespace AppName
 
             comboBox1.Items.Add("Page 1");
             MyViews.CreateNewView("Page 1");
-            MyViews.InsertNewControlOnView<TextBox>(textBox1);
+            MyViews.InsertNewControlOnView<Label>(label2,"static Example View");
             MyViews.InsertNewControlOnView<Label>(label1, "Page 1");
             MyViews.InsertNewControlOnView<Button>(button1, "Index");
+
+            
+
+            comboBox1.Items.Add("Page 2");
+            comboBox1.Items.Add("Page 3");
+                        
+            MyViews.CreateNewView("*Dinamic View 1");
+            MyViews.InsertNewControlOnView<Label>(label2);
+            MyViews.InsertNewControlOnView<Label>(label1);
+            MyViews.InsertNewControlOnView<Button>(button1, "Index");
+
 
             MyViews.InitViews();
         }
@@ -60,8 +71,34 @@ namespace AppName
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            switch(MyViews.ActualView)
+            {
+                case "Index":
+                    switch(comboBox1.Text)
+                    {
+                        case "Page 2":
+                            MyViews.ReplaceViewName("*Dinamic View 1", "Page 2");
+                            MyViews.ChangeControlOnView<Label>("Page 2", label1, "Page 2");
+                            MyViews.ChangeControlOnView<Label>("Page 2", label2, "this is a dnamic view");
+                            MyViews.MoveToOtherView("Page 2");
+                            break;
+                        case "Page 3":
+                            MyViews.ReplaceViewName("*Dinamic View 1", "Page 3");
+                            MyViews.ChangeControlOnView<Label>("Page 3", label1, "Page 3");
+                            MyViews.ChangeControlOnView<Label>("Page 3", label2, "this is a other dnamic view");
+                            MyViews.MoveToOtherView("Page 3");
+                            break;
+                        default:
+                            MyViews.MoveToOtherView(comboBox1.Text);
+                            break;
+                    }
+                    break;
+
+                default:
+                    MyViews.MoveToOtherView(comboBox1.Text);
+                    break;
+            }
             
-            MyViews.MoveToOtherView(comboBox1.Text);
         }
     }
 }

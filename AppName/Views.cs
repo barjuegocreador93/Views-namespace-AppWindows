@@ -10,6 +10,8 @@ namespace AppName
     public class Views
     {
         private List<string> vistaName = new List<string>();
+        private List<string> dinmicName = new List<string>();
+        private List<bool> dinamic = new List<bool>();
         private List<List<bool>> enable = new List<List<bool>>();
         private List<List<string>> texts = new List<List<string>>();
         private List<List<Type>> types = new List<List<Type>>();
@@ -37,6 +39,12 @@ namespace AppName
         public void CreateNewView(string name)
         {
             vistaName.Add(name);
+            bool d;
+            if (name[0] == '*')
+                dinamic.Add(true);
+            else
+                dinamic.Add(false);
+            dinmicName.Add(name);             
             List<Control> nuevo = new List<Control>();
             List<Type> ntype = new List<Type>();
             List<string> ntext = new List<string>();
@@ -128,13 +136,14 @@ namespace AppName
             {
                 Visbale(actualView, false);
                 Visbale(next, true);
+                if(dinamic[actualView])vistaName[actualView] = dinmicName[actualView];
                 actualView = next;
                 sactualVista = text;
             }
 
         }
 
-        public void ModificarControlOnVista<T>(string nameVista, T x, string textControl, bool en = true)
+        public void ChangeControlOnView<T>(string nameVista, T x, string textControl, bool en = true)
         {
             int i = SharVista(nameVista);
             if (i != -1)
@@ -152,7 +161,7 @@ namespace AppName
             }
         }
 
-        public void ReplaceVista(string oldVista, string newVista, bool clear = false)
+        public void ReplaceViewName(string oldVista, string newVista, bool clear = false)
         {
             int ioldvista = SharVista(oldVista);
             if (ioldvista != -1)
