@@ -49,10 +49,10 @@ namespace AppName
             switch (MyViews.ActualView)
             {
                 case "Index":
-                    MyViews.MoveToOtherVista("Hello World");
+                    MyViews.MoveToOtherView("Hello World");
                     break;
                 default:
-                    MyViews.MoveToOtherVista(button1.Text);
+                    MyViews.MoveToOtherView(button1.Text);
                     break;
             }
             
@@ -61,7 +61,7 @@ namespace AppName
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            MyViews.MoveToOtherVista(comboBox1.Text);
+            MyViews.MoveToOtherView(comboBox1.Text);
         }
     }
 }

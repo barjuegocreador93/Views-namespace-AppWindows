@@ -97,7 +97,7 @@ namespace AppName
                     Visbale(i, true);
                 }
             }
-            MoveToOtherVista(vistaName[actualView]);
+            MoveToOtherView(vistaName[actualView]);
 
 
         }
@@ -121,7 +121,7 @@ namespace AppName
             return -1;
         }
 
-        public void MoveToOtherVista(string text)
+        public void MoveToOtherView(string text)
         {
             int next = SharVista(text);
             if (next != -1)
